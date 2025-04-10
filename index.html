@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjustable Audio Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Adjustable Audio Recorder</h1>
+
+    <div class="controls">
+        <div>
+            <label for="filenameInput">Base Filename:</label>
+            <input type="text" id="filenameInput" placeholder="e.g., meeting_notes">
+        </div>
+
+        <div class="duration-control">
+            <label for="durationInput">Recording Duration (seconds):</label>
+            <input type="number" id="durationInput" value="15" min="1" max="60" step="1">
+            <input type="range" id="durationSlider" value="15" min="1" max="60" step="1">
+            <span id="durationValue">15s</span>
+        </div>
+
+        <div>
+            <button id="recordButton">Rec</button>
+        </div>
+    </div>
+
+    <div id="status">
+        <p>Ready. Set duration, enter filename, and press 'Rec'.</p>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="main.js"></script>
+
+</body>
+</html>
